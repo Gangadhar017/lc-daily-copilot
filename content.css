@@ -1,0 +1,153 @@
+/* LC Daily Copilot - panel styles (content.css) */
+
+#lcdc-launcher {
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  z-index: 2147483000;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  border: none;
+  background: #f59e0b;
+  color: #1e1e2e;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+#lcdc-launcher:hover { background: #fbbf24; }
+
+#lcdc-panel {
+  position: fixed;
+  right: 18px;
+  bottom: 74px;
+  z-index: 2147483000;
+  width: 420px;
+  max-width: calc(100vw - 36px);
+  max-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  background: #1e1e2e;
+  color: #cdd6f4;
+  border: 1px solid #45475a;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  font: 13px/1.45 system-ui, -apple-system, "Segoe UI", sans-serif;
+  overflow: hidden;
+}
+
+#lcdc-panel .lcdc-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 12px;
+  background: #181825;
+  border-bottom: 1px solid #313244;
+  flex: none;
+}
+
+#lcdc-panel .lcdc-head b { color: #f9e2af; font-size: 13px; }
+#lcdc-panel .lcdc-spacer { flex: 1; }
+
+#lcdc-panel .lcdc-icon {
+  border: none;
+  background: transparent;
+  color: #a6adc8;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 6px;
+}
+#lcdc-panel .lcdc-icon:hover { background: #313244; color: #cdd6f4; }
+
+#lcdc-panel .lcdc-body {
+  padding: 10px 12px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+}
+
+#lcdc-panel .lcdc-row {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+#lcdc-panel .lcdc-btn {
+  border: 1px solid #585b70;
+  background: #313244;
+  color: #cdd6f4;
+  padding: 6px 10px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+#lcdc-panel .lcdc-btn:hover:not(:disabled) { background: #45475a; }
+#lcdc-panel .lcdc-btn:disabled { opacity: 0.45; cursor: default; }
+#lcdc-panel .lcdc-btn.primary { background: #f59e0b; border-color: #f59e0b; color: #1e1e2e; font-weight: 600; }
+#lcdc-panel .lcdc-btn.primary:hover:not(:disabled) { background: #fbbf24; }
+
+#lcdc-panel #lcdc-lang {
+  flex: 1;
+  background: #11111b;
+  color: #cdd6f4;
+  border: 1px solid #585b70;
+  border-radius: 8px;
+  padding: 5px 8px;
+  font-size: 12.5px;
+}
+
+#lcdc-panel #lcdc-status {
+  font-size: 12px;
+  color: #a6adc8;
+  white-space: pre-wrap;
+}
+
+#lcdc-panel #lcdc-code {
+  background: #11111b;
+  border: 1px solid #313244;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 0;
+  max-height: 28vh;
+  overflow: auto;
+  font: 12px/1.5 ui-monospace, Consolas, "Courier New", monospace;
+  color: #a6e3a1;
+  white-space: pre;
+}
+
+#lcdc-panel #lcdc-fix {
+  background: #11111b;
+  color: #cdd6f4;
+  border: 1px solid #313244;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font: 12px/1.4 system-ui, sans-serif;
+  min-height: 44px;
+  resize: vertical;
+}
+
+#lcdc-panel .lcdc-toast {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  background: #a6e3a1;
+  color: #1e1e2e;
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  animation: lcdc-fade 3.5s forwards;
+  pointer-events: none;
+}
+
+@keyframes lcdc-fade {
+  0%, 80% { opacity: 1; }
+  100% { opacity: 0; }
+}

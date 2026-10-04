@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <style>
+    body {
+      width: 280px;
+      margin: 0;
+      padding: 14px;
+      background: #1e1e2e;
+      color: #cdd6f4;
+      font: 13px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif;
+    }
+    h2 { margin: 0 0 10px; font-size: 14px; color: #f9e2af; }
+    .dim { color: #a6adc8; font-size: 12px; }
+    .title { font-weight: 600; font-size: 13.5px; margin: 2px 0; }
+    .badge {
+      display: inline-block;
+      padding: 1px 8px;
+      border-radius: 999px;
+      font-size: 11px;
+      font-weight: 600;
+      margin-top: 4px;
+    }
+    .badge.Easy { background: #a6e3a1; color: #1e1e2e; }
+    .badge.Medium { background: #f9e2af; color: #1e1e2e; }
+    .badge.Hard { background: #f38ba8; color: #1e1e2e; }
+    button {
+      width: 100%;
+      margin-top: 12px;
+      padding: 8px;
+      border: none;
+      border-radius: 8px;
+      background: #f59e0b;
+      color: #1e1e2e;
+      font-weight: 600;
+      font-size: 13px;
+      cursor: pointer;
+    }
+    button.ghost { background: #313244; color: #cdd6f4; margin-top: 8px; }
+    button:hover { filter: brightness(1.1); }
+    #error { color: #f38ba8; margin-top: 8px; font-size: 12px; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <h2>&#9889; LC Daily Copilot</h2>
+  <div id="status" class="dim">Loading today's problem&hellip;</div>
+  <div id="daily" hidden>
+    <div id="date" class="dim"></div>
+    <div id="title" class="title"></div>
+    <span id="badge" class="badge"></span>
+  </div>
+  <div id="error" hidden></div>
+  <button id="open" hidden>Open today's problem</button>
+  <button id="opts" class="ghost">Settings (API key)</button>
+  <script src="popup.js"></script>
+</body>
+</html>

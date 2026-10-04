@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>LC Daily Copilot - Settings</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 24px;
+      background: #1e1e2e;
+      color: #cdd6f4;
+      font: 14px/1.6 system-ui, -apple-system, "Segoe UI", sans-serif;
+      max-width: 560px;
+    }
+    h1 { font-size: 18px; color: #f9e2af; margin-top: 0; }
+    label { display: block; font-weight: 600; margin: 16px 0 4px; }
+    .hint { color: #a6adc8; font-size: 12.5px; margin: 2px 0 0; }
+    input, select {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 8px 10px;
+      background: #11111b;
+      color: #cdd6f4;
+      border: 1px solid #585b70;
+      border-radius: 8px;
+      font-size: 13.5px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 9px 22px;
+      border: none;
+      border-radius: 8px;
+      background: #f59e0b;
+      color: #1e1e2e;
+      font-weight: 600;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    button:hover { background: #fbbf24; }
+    #saved { color: #a6e3a1; margin-left: 10px; font-size: 13px; }
+    a { color: #89b4fa; }
+  </style>
+</head>
+<body>
+  <h1>&#9889; LC Daily Copilot &mdash; Settings</h1>
+
+  <label for="apiKey">Gemini API key</label>
+  <input type="password" id="apiKey" placeholder="AIza..." autocomplete="off" />
+  <p class="hint">
+    Create a free key at <a href="https://aistudio.google.com/apikey" target="_blank">aistudio.google.com/apikey</a>.
+    It is stored only in this browser (chrome.storage.local) and sent only to Google's Gemini API.
+  </p>
+
+  <label for="model">Gemini model</label>
+  <input type="text" id="model" placeholder="gemini-2.5-flash" />
+  <p class="hint">Default: gemini-2.5-flash. Change this if Google renames its models.</p>
+
+  <label for="lang">Default language</label>
+  <select id="lang">
+    <option value="python3">Python3</option>
+    <option value="cpp">C++</option>
+    <option value="java">Java</option>
+    <option value="javascript">JavaScript</option>
+    <option value="golang">Go</option>
+    <option value="c">C</option>
+    <option value="csharp">C#</option>
+    <option value="typescript">TypeScript</option>
+  </select>
+
+  <button id="save">Save</button>
+  <span id="saved" hidden>Saved.</span>
+
+  <script src="options.js"></script>
+</body>
+</html>
