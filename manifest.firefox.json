@@ -6,7 +6,10 @@
   "browser_specific_settings": {
     "gecko": {
       "id": "lc-daily-copilot@gangadhar017.github.io",
-      "strict_min_version": "121.0"
+      "strict_min_version": "128.0",
+      "data_collection_permissions": {
+        "required": ["none"]
+      }
     }
   },
   "permissions": ["storage", "clipboardWrite"],
@@ -15,7 +18,6 @@
     "https://generativelanguage.googleapis.com/*"
   ],
   "background": {
-    "service_worker": "background.js",
     "scripts": ["background.js"]
   },
   "action": {
